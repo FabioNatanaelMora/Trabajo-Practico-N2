@@ -82,28 +82,31 @@ Usamos prompt para pedir la edad del perro. Multiplicamos por 7 y mostramos el m
 No se usa return porque solo se imprime.
 */
 
-// 6. Capitalizar palabras
-function capitalizarPalabras(frase) {
-  return frase.split(" ").map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(" "); // split(" ") → divide la frase en palabras
+/////////////// Solución 6 ///////////////
+console.log("\n 6: Capitalizar palabras");
+function capitalizarPalabras(cadena) {
+  return cadena.split(' ').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+}                                                                                     // split(" ") → divide la frase en palabras
                                                                                       // map(...) → recorre cada palabra y:
                                                                                       // charAt(0).toUpperCase() → pone en mayúscula la primera letra
                                                                                       // slice(1) → toma el resto de la palabra
                                                                                       // join(" ") → une las palabras nuevamente con espacios
-}
+
 
 console.log("Solución 6:");
 console.log(capitalizarPalabras("hola mundo desde javascript"));
 console.log(capitalizarPalabras("esto es una prueba"));
-console.log(capitalizarPalabras("bienvenidos al tpo"));
+console.log(capitalizarPalabras("profesor xavier"));
 console.log("//////////////////////////////");
 
 /*
 Convertimos cada palabra usando split y map, luego juntamos con join. Así logramos capitalizar cada palabra.
 */
 
-// 7. Fibonacci
+////////////// Solución 7 ///////////////
+console.log("\n 7: Fibonacci");
 function fibonacci(n) {
-  const secuencia = [0, 1];       // Inicializa la secuencia con los dos primeros números
+  const secuencia = [0, 1];
   for (let i = 2; i < n; i++) {
     secuencia.push(secuencia[i - 1] + secuencia[i - 2]); // suma los dos anteriores
   }
@@ -117,6 +120,7 @@ console.log(fibonacci(1)); // [0]
 console.log("//////////////////////////////");
 
 /*
+La lógica consiste en iniciar con los dos primeros números y sumar los anteriores para generar la secuencia.
 Generamos la serie de Fibonacci hasta n elementos. Usamos un for para calcular cada nuevo valor sumando los anteriores.
 */
 
